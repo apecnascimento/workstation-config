@@ -1,0 +1,10 @@
+---
+- name: Ensure polybar
+  ansible.builtin.package:
+    name: polybar
+    state: present
+
+- name: Ensure polybarconfig
+  ansible.builtin.template:
+    src: templates/polybar.j2
+    dest: /etc/polybar/polybar.conf
