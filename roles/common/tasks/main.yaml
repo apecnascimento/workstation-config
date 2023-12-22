@@ -1,7 +1,8 @@
 ---
-- name: Add nmtui package
+- name: Add basic packages package
   ansible.builtin.package:
     name:
       - nmtui
+      - kitty
     state: present
-    
+
