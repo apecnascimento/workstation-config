@@ -8,3 +8,8 @@
   ansible.builtin.template:
     src: templates/polybar.ini.j2
     dest: /etc/polybar/polybar.ini
+
+- name: Ensure polybar init script
+  ansible.builtin.template:
+    src: templates/polybar.sh
+    dest: ~/.config/i3/polybar.sh
