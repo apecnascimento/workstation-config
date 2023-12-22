@@ -1,6 +1,7 @@
 ---
-- name: Add common packages
-  ansible.builtin.dnf:
+- name: Add nmtui package
+  ansible.builtin.package:
     name:
-      - python3-pip
+      - nmtui
     state: present
+    
