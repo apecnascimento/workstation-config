@@ -6,3 +6,7 @@
       - kitty
     state: present
 
+- name: Add kitty tokio night theme
+  ansible.builtin.template:
+    src: templates/kitty.conf.j2
+    dest: ~/.config/kitty/kitty.conf
