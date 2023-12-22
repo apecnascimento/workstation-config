@@ -4,6 +4,7 @@
     name:
       - nmtui
       - kitty
+      - zsh
     state: present
 
 - name: Add kitty tokio night theme
