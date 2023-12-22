@@ -1,0 +1,10 @@
+---
+- name: Ensure nitrogen
+  ansilble.builtin.package:
+    name: nitrogen
+    state: present
+
+- name: Ensure i3wm config
+  ansible.builtin.template:
+    src: templates/i3wm.j2
+    dest: ~/.config/i3/config
