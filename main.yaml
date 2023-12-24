@@ -8,4 +8,7 @@
     - zsh
     - vagrant
     - docker
+    - kind
+    - neovim
+
 
