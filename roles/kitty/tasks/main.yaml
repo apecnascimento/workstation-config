@@ -1,0 +1,12 @@
+---
+- name: Add kitty package
+  ansible.builtin.package:
+    name: kitty
+    state: present
+
+- name: Add kitty tokio night theme
+  ansible.builtin.template:
+    src: templates/kitty.conf.j2
+    dest: ~/.config/kitty/kitty.conf
+
+

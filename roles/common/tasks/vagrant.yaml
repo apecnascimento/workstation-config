@@ -1,0 +1,22 @@
+---
+- name: Add vagrant and libvirt packages
+  ansible.builtin.package:
+    name:
+      - vagrant
+      - qemu-kvm
+      - virt-install
+      - gcc
+      - libvirt
+      - libvirt-devel
+      - libxml2-devel
+      - make
+      - ruby-devel
+    state: present
+
+- name: Install vagrant-libvirt pluguin
+  ansible.builtin.command: vagrant plugin install vagrant-libvirt
+
+- name: Install vagrant-mutate pluguin
+  ansible.builtin.command: vagrant plugin install vagrant-mutate
+
+

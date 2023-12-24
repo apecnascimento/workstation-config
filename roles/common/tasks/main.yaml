@@ -5,22 +5,7 @@
       - nmtui
       - kitty
       - zsh
-      - vagrant
-      - qemu-kvm
-      - virt-install
-      - gcc
-      - libvirt
-      - libvirt-devel
-      - libxml2-devel
-      - make
-      - ruby-devel
     state: present
-
-- name: Install vagrant-libvirt pluguin
-  ansible.builtin.command: vagrant plugin install vagrant-libvirt
-
-- name: Install vagrant-mutate pluguin
-  ansible.builtin.command: vagrant plugin install vagrant-mutate
 
 - name: Add kitty tokio night theme
   ansible.builtin.template:
@@ -44,3 +29,19 @@
   ansible.builtin.template:
     src: templates/bashrc.j2
     dest: ~/.bashrc
+
+- name: Install vagrant and libvirt
+  ansible.builtin.include_tasks:
+    file: vagrant.yaml
+
+- name: Install docker
+  ansible.builtin.include_tasks:
+    file: docker.yaml
+
+- name: Install kind k8s
+  ansible.builtin.include_tasks:
+    file: kind.yaml
+
+- name: Install k9s cli
+  ansible.builtin.include_tasks:
+    file: k9s.yaml
