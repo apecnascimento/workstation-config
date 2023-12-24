@@ -1,0 +1,25 @@
+---
+- name: Add zsh package
+  ansible.builtin.package:
+    name: zsh 
+    state: present
+
+- name: Download ohmyzsh instaler
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+    dest: /tmp/zsh-installer.sh
+
+- name: Execute ohmyzsh zsh-installer
+  ansible.builtin.shell: /tmp/zsh-installer.sh
+
+- name: Configure ohmyzsh
+  ansible.builtin.template:
+    src: templates/ohmyzsh.j2
+    dest: ~/.zshrc
+
+- name: Configure bashrc
+  ansible.builtin.template:
+    src: templates/bashrc.j2
+    dest: ~/.bashrc
+
+
