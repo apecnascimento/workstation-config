@@ -3,7 +3,6 @@
   ansible.builtin.package:
     name:
       - nmtui
-      - zsh
     state: present
 
 - name: Install vagrant and libvirt
