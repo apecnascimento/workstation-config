@@ -2,4 +2,8 @@
 - hosts: localhost
   connection: local
   roles:
-    - common
+    - i3wm
+    - polybar
+    - kitty
+    - zsh
+    - vagrant

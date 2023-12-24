@@ -1,7 +1,9 @@
 ---
-- name: Ensure nitrogen
+- name: Ensure basic packages
   ansilble.builtin.package:
-    name: nitrogen
+    name: 
+      - nitrogen
+      - NetworkManager-tui
     state: present
 
 - name: Ensure i3wm config
