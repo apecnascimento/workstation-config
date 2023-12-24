@@ -3,14 +3,8 @@
   ansible.builtin.package:
     name:
       - nmtui
-      - kitty
       - zsh
     state: present
-
-- name: Add kitty tokio night theme
-  ansible.builtin.template:
-    src: templates/kitty.conf.j2
-    dest: ~/.config/kitty/kitty.conf
 
 - name: Download ohmyzsh instaler
   ansible.builtin.get_url:
