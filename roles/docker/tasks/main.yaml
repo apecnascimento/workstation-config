@@ -1,0 +1,19 @@
+---
+- name: Add docker-ce-stable to yum repo
+  ansible.builtin.yum_repository:
+    name: docker-ce-stable
+    description: Docker CE repo
+    baseurl: https://download.docker.com/linux/centos/$releasever/$basearch/stable
+    gpgcheck: true
+    gpgkey: https://download.docker.com/linux/centos/gpg
+
+- name: Ensure docker
+  ansible.builtin.yum:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-buildx-plugin 
+      - docker-compose-plugin
+    state: present
+    update_cache: true
