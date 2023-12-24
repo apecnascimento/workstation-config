@@ -5,3 +5,7 @@
     dest: /usr/local/bin/kind
     mode: '0700'
 
+- name: Add k9s
+  ansible.builtin.package:
+    name: k9s
+    state: present
