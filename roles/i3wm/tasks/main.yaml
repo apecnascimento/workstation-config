@@ -4,7 +4,20 @@
     name: 
       - nitrogen
       - NetworkManager-tui
+      - python3-netifaces
     state: present
+
+- name: Add bubblebee
+  ansible.biltin.pip:
+    name: bumblebee-status
+    args: --user
+    status: present
+
+- name: Ensure bubblebee dependencies
+  ansible.biltin.pip:
+    name: 
+     - psutil
+    status: present
 
 - name: Ensure i3wm config
   ansible.builtin.template:

@@ -3,7 +3,6 @@
   connection: local
   roles:
     - i3wm
-    - polybar
     - kitty
     - zsh
     - vagrant
