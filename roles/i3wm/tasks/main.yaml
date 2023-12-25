@@ -5,6 +5,7 @@
       - nitrogen
       - NetworkManager-tui
       - python3-netifaces
+      - python3-libvirt
     state: present
 
 - name: Add bubblebee
