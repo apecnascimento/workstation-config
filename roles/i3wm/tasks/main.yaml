@@ -37,7 +37,12 @@
     src: templates/i3wm.j2
     dest: "/home/{{ username }}/.config/i3/config"
 
-- name: Ensure rofi theme tokionight
+- name: Ensure rofi theme tokyonight
   ansible.builtin.template:
-    src: templates/rofi-tokionight.rsai.j2
-    dest: "/usr/share/rofi/themes/tokionight.rsai"
+    src: templates/rofi-tokyonight.rasi.j2
+    dest: "/usr/share/rofi/themes/tokyonight.rasi"
+
+- name: Ensure rofi config
+  ansible.builtin.template:
+    src: templates/roficonfig.rasi.j2
+    dest: "/home/{{ username }}/.config/rofi/config.rasi"
