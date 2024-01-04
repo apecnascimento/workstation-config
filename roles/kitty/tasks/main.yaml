@@ -4,6 +4,12 @@
     name: kitty
     state: present
 
+- name: Ensure kitty config folder
+  ansible.builtin.file:
+    path: "/home/{{ username }}/.config/kitty"
+    state: directory
+    owner: "{{ username }}"
+ 
 - name: Add kitty tokio night theme
   ansible.builtin.template:
     src: templates/kitty.conf.j2

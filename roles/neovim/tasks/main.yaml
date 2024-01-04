@@ -5,6 +5,7 @@
     state: present
 
 - name: Download lazzyvim config
+  become: false
   ansible.builtin.git:
     repo: 'https://github.com/apecnascimento/nvim-config.git'
     dest: '/home/{{ username }}/.config/nvim'

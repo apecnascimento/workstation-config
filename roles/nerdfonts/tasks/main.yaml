@@ -9,11 +9,13 @@
     src: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip
     dest: "/home/{{ username }}/.local/share/fonts/"
     remote_src: true
+
 - name: Download Nedfonts symbols
   ansible.builtin.unarchive:
     src: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/NerdFontsSymbolsOnly.zip
     dest: "/home/{{ username }}/.local/share/fonts/"
     remote_src: true
+
 - name: Update font Cache
   ansible.builtin.command: fc-cache -fv 
 
