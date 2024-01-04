@@ -11,16 +11,16 @@
 - name: Add bubblebee
   ansible.builtin.pip:
     name: bumblebee-status
-    args: --user
-    status: present
+    extra_args: --user
+    state: present
 
 - name: Ensure bubblebee dependencies
   ansible.builtin.pip:
     name: 
      - psutil
-    status: present
+    state: present
 
 - name: Ensure i3wm config
   ansible.builtin.template:
     src: templates/i3wm.j2
-    dest: ~/.config/i3/config
+    dest: "/home/{{ username }}/.config/i3/config"

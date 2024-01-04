@@ -15,11 +15,11 @@
 - name: Configure ohmyzsh
   ansible.builtin.template:
     src: templates/ohmyzsh.j2
-    dest: ~/.zshrc
+    dest: "/home/{{ username }}/.zshrc"
 
 - name: Configure bashrc
   ansible.builtin.template:
     src: templates/bashrc.j2
-    dest: ~/.bashrc
+    dest: "/home/{{ username }}/.bashrc"
 
 

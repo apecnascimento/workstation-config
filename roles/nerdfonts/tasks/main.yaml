@@ -1,18 +1,18 @@
 ---
 - name: Ensore fonts folder
   ansible.builtin.file:
-    path: ~/.local/share/fonts/
+    path: "/home/{{ username }}/.local/share/fonts/
     state: directoty
 
 - name: Donwload Firacode nerdfont
   ansible.builtin.unarchive:
     url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip
-    dest: ~/.local/share/fonts/
+    dest: "/home/{{ username }}/.local/share/fonts/"
 
 - name: Download Nedfonts symbols
   ansible.builtin.unarchive:
     src: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/NerdFontsSymbolsOnly.zip
-    dest: ~/.local/share/fonts/
+    dest: "/home/{{ username }}.local/share/fonts/"
 
 - name: Update font Cache
   ansible.builtin.command: fc-cache -fv 
