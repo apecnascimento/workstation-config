@@ -3,14 +3,12 @@
   connection: local
   become: true
   vars:
-    username: <USERNAME>
+    username: pnascimento
   roles:
     - i3wm
     - kitty
-    - zsh
     - vagrant
     - docker
     - kind
     - neovim
-
-
+    - nerdfonts

@@ -6,6 +6,7 @@
     mode: '0700'
 
 - name: Add k9s
-  ansible.builtin.package:
-    name: k9s
+  ansible.builtin.dnf:
+    name: 'https://github.com/derailed/k9s/releases/download/v0.30.8/k9s_linux_amd64.rpm'
+    disable_gpg_check: true
     state: present

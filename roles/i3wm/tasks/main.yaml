@@ -9,9 +9,10 @@
     state: present
 
 - name: Add bubblebee
+  become_user: "{{ username }}"
   ansible.builtin.pip:
     name: bumblebee-status
-    extra_args: --user
+    extra-args: "--user"
     state: present
 
 - name: Ensure bubblebee dependencies

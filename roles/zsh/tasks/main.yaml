@@ -8,6 +8,7 @@
   ansible.builtin.get_url:
     url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
     dest: /tmp/zsh-installer.sh
+    mode: '0777'
 
 - name: Execute ohmyzsh zsh-installer
   ansible.builtin.shell: /tmp/zsh-installer.sh
