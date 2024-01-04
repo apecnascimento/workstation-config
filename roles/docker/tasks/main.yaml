@@ -18,3 +18,9 @@
       - docker-compose-plugin
     state: present
     update_cache: true
+
+- name: Enable docker service
+  ansible.builtin.service:
+    name: docker
+    state: started
+    enabled: true
