@@ -1,6 +1,6 @@
 ---
 - name: Ensure basic packages
-  ansilble.builtin.package:
+  ansible.builtin.package:
     name: 
       - nitrogen
       - NetworkManager-tui
@@ -9,13 +9,13 @@
     state: present
 
 - name: Add bubblebee
-  ansible.biltin.pip:
+  ansible.builtin.pip:
     name: bumblebee-status
     args: --user
     status: present
 
 - name: Ensure bubblebee dependencies
-  ansible.biltin.pip:
+  ansible.builtin.pip:
     name: 
      - psutil
     status: present
