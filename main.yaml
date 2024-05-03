@@ -3,12 +3,12 @@
   connection: local
   become: true
   vars:
-    username: pnascimento
+    username: apecnascimento
   roles:
-    - i3wm
-    - kitty
-    - vagrant
-    - docker
-    - kind
+    # - i3wm
+    # - kitty
+    # - vagrant
+    # - docker
+    # - kind
     - neovim
     - nerdfonts

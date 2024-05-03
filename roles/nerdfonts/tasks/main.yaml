@@ -17,6 +17,4 @@
     remote_src: true
 
 - name: Update font Cache
-  ansible.builtin.command: fc-cache -fv 
-
-
+  ansible.builtin.command: fc-cache -fv
