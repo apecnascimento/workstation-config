@@ -1,1 +1,1 @@
-from . import deploy
+from .deploy import deploy_vagrant
