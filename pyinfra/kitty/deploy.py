@@ -22,6 +22,12 @@ def deploy_kitty(_sudo=True):
 
     files.template(
         name="Add kitty tokio night theme",
+        src="templates/kitty/nord.conf.j2",
+        dest=f"/home/{host.get_fact(User)}/.config/kitty/nord.conf"
+    )
+
+    files.template(
+        name="Add kitty tokio night theme",
         src="templates/kitty/kitty.conf.j2",
         dest=f"/home/{host.get_fact(User)}/.config/kitty/kitty.conf"
     )
