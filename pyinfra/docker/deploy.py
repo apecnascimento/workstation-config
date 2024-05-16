@@ -30,7 +30,7 @@ def deploy_docker():
 
     server.shell(
         name="Add user to Docker group",
-        commands=f"usermod -aG docker {host.get_fact(User)}"
+        commands=f"usermod -aG docker $USER"
     )
 
     systemd.service(
