@@ -9,6 +9,7 @@ def deploy_kitty(_sudo=True):
 
     dnf.packages(
         name="Add kitty package",
+	packages=["kitty"],
         present=True
     )
 

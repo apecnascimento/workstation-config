@@ -9,6 +9,7 @@ def deploy_docker():
 
     yum.repo(
         name="Add docker-ce-stable to yum repo",
+	src="DockerCE",
         baseurl="https://download.docker.com/linux/fedora/$releasever/$basearch/stable",
         gpgkey="https://download.docker.com/linux/fedora/gpg",
         gpgcheck=True
